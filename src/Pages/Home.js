@@ -5,20 +5,19 @@ import InvolvementFair from "../CarouselPics/InvolvementFair.jpg";
 import AliceCarousel from "react-alice-carousel";
 import KeyboardDoubleArrowRightRounded from "@mui/icons-material/KeyboardDoubleArrowRightRounded";
 import KeyboardDoubleArrowLeftRounded from "@mui/icons-material/KeyboardDoubleArrowLeftRounded";
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import "react-alice-carousel/lib/alice-carousel.css";
 import "../carousel.css";
 import home from "./home_style.module.css";
 import mission from "../resources/mission.png"
 import vision from "../resources/vision.png"
-import axios from 'axios';
 //import { processColor } from "react-native";
 
 
 //Function where images will be imported 
-const Images = () => {
-  const [images, setImages] = useState([]);
-}
+// const Images = () => {
+//   const [images, setImages] = useState([]);
+// }
 
 const HomePage = () => {
   return (
