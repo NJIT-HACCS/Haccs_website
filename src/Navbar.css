@@ -1,0 +1,83 @@
+.bullets ul
+{
+  list-style-type: none;
+}
+
+.bullets {
+  font-size: 24px;
+  background-color: #fff;
+  color: #000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.bullets ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bullets li {
+  display: inline;
+  margin-right: 30px;
+}
+
+.bullets li:last-child {
+  margin-right: 0;
+}
+
+.bullets li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.bullets li a:hover {
+  color: #ff6600;
+}
+
+
+.haccs {
+  
+  position:static;
+  margin-left: 0px;
+  margin-right: auto;
+  padding-right: 55px;
+  padding-left: 10px;
+  vertical-align: middle;
+  display: flex;
+  font-size: 50px;
+  font-family: 'Lato', sans-serif;
+}
+.haccs a{
+  text-decoration: none;
+  color: #ff6600;
+}
+
+
+/* Responsive Styles for iPhone screens */
+@media only screen and (max-width: 480px) {
+  .bullets {
+    display: grid;
+    font-size: 15px; /* Smaller font size for mobile */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: right; /* Center the items for smaller screens */
+  }
+
+  .bullets li {
+    margin-right: 15px; /* Reduce margin between menu items */
+  }
+
+  p.haccs {
+    padding-left: 0px;
+    padding-right: 260px;
+    margin: auto;
+    font-size:22px; /* Smaller header font size for mobile */
+    color: #ff6600;
+  }
+}

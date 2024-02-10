@@ -1,0 +1,33 @@
+
+@media only screen and (min-width: 1200px) {
+    iframe.calendar {
+        display: block; /* Ensures the element is a block-level element */
+        margin-left: auto; /* Centers the element horizontally */
+        margin-right: auto; /* Centers the element */
+
+    }
+}
+
+/*minimized tab*/
+@media only screen and (max-width:700px) {
+    iframe.calendar {
+        display: block; /* Ensures the element is a block-level element */
+        margin-left: auto; /* Centers the element horizontally */
+        margin-right: auto; /* Centers the element */
+        width: 80%;
+
+    }
+
+}
+
+/*mobile*/
+@media only screen and (max-width:480px) {
+    iframe.calendar {
+        display: block; /* Ensures the element is a block-level element */
+        margin-left: auto; /* Centers the element horizontally */
+        margin-right: auto; /* Centers the element */
+        width: 80%;
+
+    }
+
+}
