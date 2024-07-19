@@ -23,34 +23,55 @@ const linkedins_and_names = {
     Position: "Web Master",
     Linkedin: "https://www.linkedin.com/in/rafael--abreu/",
   },
-  Michelle: {
+  Angel: {
     Position: "President",
-    Linkedin: "https://www.linkedin.com/in/michelleabautista/",
-  },
-  Leslie: {
-    Position: "Vice President",
-    Linkedin: "https://www.linkedin.com",
-  },
-  Jason: {
-    Position: "Educational Coordinator",
-    Linkedin: "https://www.linkedin.com/in/jason-morales-d/",
+    Linkedin: "https://www.linkedin.com/in/angel-cazares-aa655926a/",
   },
   Gabriel: {
-    Position: "Secretary",
-    Linkedin: "https://www.linkedin.com",
+    Position: "Internal Vice President",
+    Linkedin: "https://www.linkedin.com/in/gabriel-orbe/",
   },
-  Angel:
+  Tammy: {
+    Position: "External Vice President",
+    Linkedin: "https://www.linkedin.com/in/tammy-pelaez/"
+  },
+  Emily: {
+    Position: "Educational Coordinator",
+    Linkedin: "https://www.linkedin.com/in/emily-morales-medina/",
+  },
+  Daniel: {
+    Position: "Secretary",
+    Linkedin: "https://www.linkedin.com/in/daniel-montoya-970488266/",
+  },
+  Jason:
   {
     Position: "Treasurer",
+    Linkedin: "https://www.linkedin.com/in/jason-morales-d/"
+  },
+  Marcel:
+  {
+    Position: "Marketing Lead",
     Linkedin: "https://www.linkedin.com"
   },
-  Nickole:
+  Sarah:
   {
-    Position: "Social Media Coordinator",
+    Position: "Public Relations",
     Linkedin: "https://www.linkedin.com"
+  },
+  Charlie:
+  {
+    Position: "Designer",
+    Linkedin: "https://www.linkedin.com/in/charles-filian-58534b284/"
   }
 };
+
+imageList.forEach((imageObj) => {
+  console.log("URL:", imageObj.url);
+  console.log("Name:", imageObj.name);})
+
 const Eboard = () => {
+  console.log(imageList);
+  console.log(linkedins_and_names);
   return (
     <>
     
@@ -64,17 +85,44 @@ const Eboard = () => {
         <h1 className={eboard.haccs}>Meet Our Eboard 2023-2024</h1>
   
         <div className={eboard.President}>
-          <h1 id="Position">{linkedins_and_names[imageList[4].name].Position}</h1>
+          <h1 id="Position">{linkedins_and_names[imageList[0].name].Position}</h1>
             <div>
-              <a className={eboard.link} href={linkedins_and_names[imageList[4].name].Linkedin} target="_blank" rel="noreferrer">
-              <img src={imageList[4].url} className={eboard.main_img} alt="pic"></img></a>
+              <a className={eboard.link} href={linkedins_and_names[imageList[0].name].Linkedin} target="_blank" rel="noreferrer">
+              <img src={imageList[0].url} className={eboard.main_img} alt="pic"></img></a>
             </div>
 
-          <p id="Name" className={eboard.name}>{imageList[4].name}</p>
+          <p id="Name" className={eboard.name}>{imageList[0].name}</p>
         </div>
         
         <div className={eboard.container}>
           
+          <div className={eboard.Member}>
+            <h1 id="Position">{linkedins_and_names[imageList[4].name].Position}</h1>
+              <div>
+                <a className={eboard.link} href={linkedins_and_names[imageList[4].name].Linkedin} target="_blank" rel="noreferrer">
+                <img src={imageList[4].url} className={eboard.main_img} alt="pic"></img></a>
+              </div>
+            <p id="Name" className={eboard.name}>{imageList[4].name}</p>
+          </div>
+    
+          <div className={eboard.Member}>
+            <h1 id="Position">{linkedins_and_names[imageList[9].name].Position}</h1>
+              <div>
+                  <a className={eboard.link} href={linkedins_and_names[imageList[9].name].Linkedin} target="_blank" rel="noreferrer">
+                  <img src={imageList[9].url} className={eboard.main_img} alt="pic"></img></a>
+              </div>
+            <p id="Name" className={eboard.name}>{imageList[9].name}</p>
+          </div>
+            
+          <div className={eboard.Member}>
+            <h1 id="Position">{linkedins_and_names[imageList[2].name].Position}</h1>
+              <div> 
+                <a className={eboard.link} href={linkedins_and_names[imageList[2].name].Linkedin} target="_blank" rel="noreferrer">
+                <img src={imageList[2].url} className={eboard.main_img} alt="pic"></img></a>
+              </div>
+            <p id="Name" className={eboard.name}>{imageList[2].name}</p>
+          </div>
+
           <div className={eboard.Member}>
             <h1 id="Position">{linkedins_and_names[imageList[3].name].Position}</h1>
               <div>
@@ -83,45 +131,45 @@ const Eboard = () => {
               </div>
             <p id="Name" className={eboard.name}>{imageList[3].name}</p>
           </div>
-            
-          
-          <div className={eboard.Member}>
-            <h1 id="Position">{linkedins_and_names[imageList[1].name].Position}</h1>
-              <div>
-                  <a className={eboard.link} href={linkedins_and_names[imageList[1].name].Linkedin} target="_blank" rel="noreferrer">
-                  <img src={imageList[1].url} className={eboard.main_img} alt="pic"></img></a>
-              </div>
-            <p id="Name" className={eboard.name}>{imageList[1].name}</p>
-          </div>
-            
-          <div className={eboard.Member}>
-            <h1 id="Position">{linkedins_and_names[imageList[0].name].Position}</h1>
-              <div> 
-                <a className={eboard.link} href={linkedins_and_names[imageList[0].name].Linkedin} target="_blank" rel="noreferrer">
-                <img src={imageList[0].url} className={eboard.main_img} alt="pic"></img></a>
-              </div>
-            <p id="Name" className={eboard.name}>{imageList[0].name}</p>
-          </div>
 
           <div className={eboard.Member}>
-            <h1 id="Position">{linkedins_and_names[imageList[2].name].Position}</h1>
-              <div>
-                <a className={eboard.link} href={linkedins_and_names[imageList[2].name].Linkedin} target="_blank" rel="noreferrer">
-                <img src={imageList[2].url} className={eboard.main_img} alt="pic"></img></a>
-              </div>
-            <p id="Name" className={eboard.name}>{imageList[2].name}</p>
-          </div>
-
-          <div className={eboard.Member}>
-              <h1 id="Position">{linkedins_and_names[imageList[6].name].Position}</h1>
+              <h1 id="Position">{linkedins_and_names[imageList[8].name].Position}</h1>
                 <div>
-                  <a className={eboard.link} href={linkedins_and_names[imageList[6].name].Linkedin} target="_blank" rel="noreferrer">
-                  <img src={imageList[6].url} className={eboard.main_img} alt="pic"></img></a>
+                  <a className={eboard.link} href={linkedins_and_names[imageList[8].name].Linkedin} target="_blank" rel="noreferrer">
+                  <img src={imageList[8].url} className={eboard.main_img} alt="pic"></img></a>
                 </div>
-              <p id="Name" className={eboard.name}>{imageList[6].name}</p>
+              <p id="Name" className={eboard.name}>{imageList[8].name}</p>
             </div>
 
           <div className={eboard.Member}>
+            <h1 id="Position">{linkedins_and_names[imageList[6].name].Position}</h1>
+              <div>
+                <a className={eboard.link} href={linkedins_and_names[imageList[6].name].Linkedin} target="_blank" rel="noreferrer">
+                <img src={imageList[6].url} className={eboard.main_img} alt="pic"></img></a>
+              </div>
+            <p id="Name" className={eboard.name}>{imageList[6].name}</p>
+          </div>
+
+          <div className={eboard.Member}>
+            <h1 id="Position">{linkedins_and_names[imageList[1].name].Position}</h1>
+              <div>
+                <a className={eboard.link} href={linkedins_and_names[imageList[1].name].Linkedin} target="_blank" rel="noreferrer">
+                <img src={imageList[1].url} className={eboard.main_img} alt="pic"></img></a>
+              </div>
+            <p id="Name" className={eboard.name}>{imageList[1].name}</p>
+          </div>
+
+          <div className={eboard.Member}>
+            <h1 id="Position">{linkedins_and_names[imageList[7].name].Position}</h1>
+              <div>
+                <a className={eboard.link} href={linkedins_and_names[imageList[7].name].Linkedin} target="_blank" rel="noreferrer">
+                <img src={imageList[7].url} className={eboard.main_img} alt="pic"></img></a>
+              </div>
+            <p id="Name" className={eboard.name}>{imageList[7].name}</p>
+          </div>
+        </div>
+        
+        <div className={eboard.President}>
             <h1 id="Position">{linkedins_and_names[imageList[5].name].Position}</h1>
               <div>
                 <a className={eboard.link} href={linkedins_and_names[imageList[5].name].Linkedin} target="_blank" rel="noreferrer">
@@ -129,8 +177,6 @@ const Eboard = () => {
               </div>
             <p id="Name" className={eboard.name}>{imageList[5].name}</p>
           </div>
-          
-        </div>
       </body>
   
     </>
