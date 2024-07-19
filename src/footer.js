@@ -52,7 +52,7 @@ const footer = () => {
               <FontAwesomeIcon icon={faDiscord} />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/NJIT-HACCS"
               target="_blank"
               rel="noopener noreferrer"
             >
