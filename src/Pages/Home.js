@@ -1,4 +1,4 @@
-import DanielWin from "../CarouselPics/DanielWin.JPG";
+import DanielWin from "../CarouselPics/DanielWin.jpg";
 import Lim_Pres from "../CarouselPics/Lim_Pres.jpg";
 import firstGBMFall from "../CarouselPics/firstGBMFall.jpg";
 import InvolvementFair from "../CarouselPics/InvolvementFair.jpg";
@@ -14,10 +14,30 @@ import vision from "../resources/vision.png"
 //import { processColor } from "react-native";
 
 
+console.log(firstGBMFall);
 //Function where images will be imported 
 // const Images = () => {
 //   const [images, setImages] = useState([]);
 // }
+
+
+const media = require.context("../CarouselPics");
+const imageUrls = [
+  <img src={firstGBMFall} className={home.carousel}/>,
+  <img src={Lim_Pres} className={home.carousel}/>
+  
+  // Add more image URLs as needed
+];
+const mediaList = media.keys().map((img)=>{
+
+    const img_name = img.split("/").pop();
+
+
+    return <img src={`../CarouselPics/${img_name}`} className={home.carousel} ></img>
+})
+
+console.log(mediaList);
+
 
 const HomePage = () => {
   return (
@@ -40,15 +60,14 @@ const HomePage = () => {
           infinite="true"
           autoPlay="true"
           autoPlayInterval={3000}
-        >
-          <img src={firstGBMFall} className={home.carousel} alt="pic" />
-          <img src={Lim_Pres} className={home.carousel} alt="pic" />
-          <img src={DanielWin} className={home.carousel} alt="pic" />
-          <img src={InvolvementFair} className={home.carousel} alt="pic" />
-        </AliceCarousel>
+          items={mediaList}
+        />
+        
+          
+       
       </div>
 
-    <div className="container">
+    <div className="container"> 
       <div className={home.info}>
         <div className={home.icons}>
             <img src={vision} alt="HACCS vision statement"></img>

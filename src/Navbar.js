@@ -25,6 +25,10 @@ const NavBar = () => {
         <li>
           <Link to="/ContactUs">Contact Us</Link>
         </li>
+
+        <li>
+          <Link to="/sponsors">Sponsors</Link>
+        </li>
       </ul>
     </nav>
   );

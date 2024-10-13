@@ -1,0 +1,39 @@
+.mainContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding: 20px; /* Optional: Adds some padding around the content */
+}
+
+.mainContainer h1 {
+    width: 714px;
+    height: 60px;
+    font-family: 'Inter';
+    font-style: normal;
+    color: #FF6A00;
+    text-align: center; /* Centers the text within the h1 */
+}
+
+.sponsorsContainer {
+    position: relative;
+    display: flex;
+    columns: 300px;
+    flex-wrap: wrap; /* Allows sponsors to wrap into multiple rows if needed */
+    justify-content: space-evenly; /* Centers the sponsors horizontally */
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 20px; /* Adds space between the h1 and sponsors */
+    
+}
+/* image 1 */
+
+.sponsorsContainer img{
+    /* image 1 */
+    border: 10px solid white;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 3%;
+    width: 264px;
+    height: 247px;
+}

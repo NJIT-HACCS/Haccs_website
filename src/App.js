@@ -5,6 +5,7 @@ import Events from "./Pages/Events";
 import Eboard from "./Pages/Eboard";
 import ContactUs from "./Pages/ContactUs";
 import Footer from "./footer";
+import SponsorsPage from "./Pages/Sponsors";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/eboard" element={<Eboard />} />
                 {/*<Route path="/GetInvolved" element={<GetInvolved />} /> */}
                 <Route path="/ContactUs" element={<ContactUs />} />
+                <Route path="/sponsors" element={<SponsorsPage/>} />
               </Routes>
             </div>
           </div>
