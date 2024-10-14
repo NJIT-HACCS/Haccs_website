@@ -13,7 +13,7 @@ const images = require.context("../CarouselPics", true);
 //Sorts and cretaes an image Object that can be returned with URL and Name
 const imageList = images.keys().sort().map((image) => {
   const img_url = images(image);  
-  return <img src={img_url} className={home.carousel} ></img>
+  return <img src={img_url} alt="" className={home.carousel} ></img>
 });
 
 const HomePage = () => {
