@@ -1,7 +1,3 @@
-import DanielWin from "../CarouselPics/DanielWin.jpg";
-import Lim_Pres from "../CarouselPics/Lim_Pres.jpg";
-import firstGBMFall from "../CarouselPics/firstGBMFall.jpg";
-import InvolvementFair from "../CarouselPics/InvolvementFair.jpg";
 import AliceCarousel from "react-alice-carousel";
 import KeyboardDoubleArrowRightRounded from "@mui/icons-material/KeyboardDoubleArrowRightRounded";
 import KeyboardDoubleArrowLeftRounded from "@mui/icons-material/KeyboardDoubleArrowLeftRounded";
@@ -11,33 +7,14 @@ import "../carousel.css";
 import home from "./home_style.module.css";
 import mission from "../resources/mission.png"
 import vision from "../resources/vision.png"
-//import { processColor } from "react-native";
 
 
-console.log(firstGBMFall);
-//Function where images will be imported 
-// const Images = () => {
-//   const [images, setImages] = useState([]);
-// }
-
-
-const media = require.context("../CarouselPics");
-const imageUrls = [
-  <img src={firstGBMFall} className={home.carousel}/>,
-  <img src={Lim_Pres} className={home.carousel}/>
-  
-  // Add more image URLs as needed
-];
-const mediaList = media.keys().map((img)=>{
-
-    const img_name = img.split("/").pop();
-
-
-    return <img src={`../CarouselPics/${img_name}`} className={home.carousel} ></img>
-})
-
-console.log(mediaList);
-
+const images = require.context("../CarouselPics", true);
+//Sorts and cretaes an image Object that can be returned with URL and Name
+const imageList = images.keys().sort().map((image) => {
+  const img_url = images(image);  
+  return <img src={img_url} className={home.carousel} ></img>
+});
 
 const HomePage = () => {
   return (
@@ -60,11 +37,8 @@ const HomePage = () => {
           infinite="true"
           autoPlay="true"
           autoPlayInterval={3000}
-          items={mediaList}
+          items={imageList}
         />
-        
-          
-       
       </div>
 
     <div className="container"> 
