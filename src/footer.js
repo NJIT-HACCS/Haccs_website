@@ -22,8 +22,8 @@ const footer = () => {
     <div className="footer-container">
       <div className="contact-logo">
         <div className="indent"> </div>
-        <img className="njit-logo" src={njit} alt="NJIT Logo"></img>
         <img className="HACCS-logo" src={logo} alt="HACCS Logo"></img>
+        <img className="njit-logo" src={njit} alt="NJIT Logo"></img>
         <div className="rectangle"> | </div>
         <div className="text-container">
           <h1>Contact Us</h1>
@@ -59,7 +59,7 @@ const footer = () => {
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </div>
-          <p>© 2023 NJIT HACCS</p>
+          <p>© 2025 NJIT HACCS</p>
         </div>
       </div>
       </div>

@@ -8,7 +8,8 @@
 
 /* Desktop view  */
 @media only screen and (min-width: 1200px){
-  .info {
+/* @media only screen { */
+.info {
     display: grid;
     grid-template-columns: 1fr 0.5fr;
     grid-gap: 10px;
@@ -29,6 +30,7 @@
     width: 150px;
     height: 150px;
     padding: 70px;
+    padding-left: 30%;
   }
   
   .content {
@@ -47,16 +49,20 @@
   .mission {
     width: 900px;
     height: 200px;
-    padding: 30px; 
+    padding: 30px;
   }
   .vision h1, .mission h1{
-    text-align: left;
+    text-align: start;
   }
+  .vision_text, .mission_text {
+    width: 60%;
+  }
+
   p{
     font-family: 'Source Code Pro', monospace;
     font-size: 14pt;
     text-align: justify;
-    text-align-last: left ;
+    text-align-last: left;
   }
   
   .app{
@@ -65,24 +71,26 @@
     align-items: center;
   }
   .carousel{
-    width: 100%;
-    height: 100vh;
-
+    width: 50%;
+    height: 50%;
+    align-items: center;
   }
-  
 
-  
 
 }
 /* auto re-size for photos */
 .app img{
   max-width: 100%;
   width:auto\9;
+  margin-left: 25%;
+  align-items: center;
+  
 }
 
 
 
 @media only screen and (max-width: 480px) {
+/* @media only screen { */
   .carousel{
     width: 100%;
     height: 300px;

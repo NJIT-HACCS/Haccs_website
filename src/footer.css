@@ -3,7 +3,8 @@
 
 
 /*Desktop query */
-@media only screen and (min-width: 1200px) {
+/* @media only screen and (min-width: 1200px){ */
+@media only screen {
   div.footer-container
   {
     align-items: center;
@@ -14,9 +15,9 @@
     display: flex;
     justify-content: center; 
     align-items: center; 
-    margin-bottom: 20px; 
+    /* margin-bottom: 20px;  */
     position: relative;
-    left: 500px;
+    margin:auto
     
   }
 
@@ -33,7 +34,7 @@
 
   .HACCS-logo
   {
-    width:300px;
+    width:200px;
     height:200px;
   }
 

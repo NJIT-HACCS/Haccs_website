@@ -11,7 +11,7 @@
   padding-bottom: 20px;
   padding-right: 10px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
@@ -30,6 +30,10 @@
   margin-right: 0;
 }
 
+.bullets li:first-child {
+  margin-left: 50px;
+}
+
 .bullets li a {
   text-decoration: none;
   color: #000;
@@ -40,8 +44,15 @@
   color: #ff6600;
 }
 
+.haccs_logo {
+  position: static;
+  margin-left: 5%;
+  /* margin-right: auto; */
+  width: 10%;
+  height: 10%;
+}
 
-.haccs {
+.haccs{
   
   position:static;
   margin-left: 0px;
@@ -66,7 +77,7 @@
     font-size: 15px; /* Smaller font size for mobile */
     padding-top: 10px;
     padding-bottom: 10px;
-    justify-content: right; /* Center the items for smaller screens */
+    justify-content: center; /* Center the items for smaller screens */
   }
 
   .bullets li {
