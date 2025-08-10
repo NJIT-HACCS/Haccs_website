@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
-.App{
+.App {
   text-align: center;
-  font-family: 'Lato', sans-serif;  
 }
 
-.links{
-  background-color: rgb(221, 70, 28);
-  
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -38,19 +35,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-
-.sliderimg{
-  width: 100%;
-  /*height: 60%;*/
-  object-fit: cover;
-}
-
-.alice-carousel {
-  position: relative;
-  width: 100%;
-  margin: auto;
-  direction: ltr;
-  text-align: center;
 }
