@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './index.css'; // optional, CRA includes this by default
+import './index.css';
+import { ChakraProvider, defaultSystem, Theme } from '@chakra-ui/react';
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -9,7 +11,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider value={defaultSystem}>
+      <Theme appearance='dark' hasBackground={false}>
+        <App />
+      </Theme>
+    </ChakraProvider>
   </React.StrictMode>
 );
 
