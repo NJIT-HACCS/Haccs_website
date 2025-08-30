@@ -3,7 +3,7 @@ import React from "react";
 
 const ErrorPage = () => {
     return (
-        <Heading size="6xl">
+        <Heading >
             Invalid Page
         </Heading>
     )
