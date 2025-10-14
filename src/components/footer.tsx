@@ -37,4 +37,5 @@ const Directions: { [key: string]: React.JSX.Element } = {
 };
 
 const Footer = ( props: Footerprops ) : React.JSX.Element => { return Directions[props.direction]; }
+
 export default React.memo(Footer);

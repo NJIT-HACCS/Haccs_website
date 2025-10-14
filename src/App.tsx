@@ -8,6 +8,7 @@ import NavBar from './components/navigate';
 import Achievements from './Screens/achievements';
 import Events from './Screens/events';
 import ContactUs from './Screens/contactus';
+import "./App.css";
 
 function App(): React.JSX.Element {
   return (

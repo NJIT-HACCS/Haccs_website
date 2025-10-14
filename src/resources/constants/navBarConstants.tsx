@@ -2,6 +2,7 @@ import HaccsLogo from '../images/haccsLogo.png'
 import { useLocation } from "react-router";
 import { Link, Text } from "@chakra-ui/react";
 import React from 'react';
+
 export const HighlanderHub = "https://njit.campuslabs.com/engage/organization/haccs";
 export const logo = HaccsLogo;
 
