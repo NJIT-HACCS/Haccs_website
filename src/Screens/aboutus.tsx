@@ -16,7 +16,7 @@ import flyer3 from "../resources/images/haccsLogo.png";
 const AboutUs = () => {
   return (
     <>
-      {/* Load Odibee Sans ONLY when this page renders (no global files touched) */}
+      {}
       <style>
         {`
           @import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
@@ -83,7 +83,7 @@ const AboutUs = () => {
               <Heading
                 as="h1"
                 color="white"
-                // Odibee Sans like Figma
+                
                 fontFamily="'Odibee Sans', system-ui, sans-serif"
                 fontWeight="400"
                 textTransform="uppercase"
@@ -142,7 +142,7 @@ const AboutUs = () => {
                 bg="whiteAlpha.300"
               />
 
-              {/* Collage: absolute positioning on desktop for Figma-like placement */}
+              {}
               <Box mt={{ base: 8, md: 20 }}>
                 <Box display="flex" justifyContent="center">
                     <Button
