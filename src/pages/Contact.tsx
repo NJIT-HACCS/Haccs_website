@@ -134,7 +134,7 @@ const Contact: React.FC = () => {
                   <Instagram size={22} />
                 </Box>
               </ChakraLink>
-              <ChakraLink href="https://linkedin.com" target="_blank">
+              <ChakraLink href="https://www.linkedin.com/in/njit-haccs/" target="_blank">
                 <Box
                   w="50px"
                   h="50px"

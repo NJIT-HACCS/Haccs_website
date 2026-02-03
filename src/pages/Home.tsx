@@ -115,7 +115,7 @@ const Home: React.FC = () => {
                   <Instagram size={18} />
                 </Box>
               </ChakraLink>
-              <ChakraLink href="https://linkedin.com" target="_blank">
+              <ChakraLink href="https://www.linkedin.com/in/njit-haccs/" target="_blank">
                 <Box
                   w="40px"
                   h="40px"

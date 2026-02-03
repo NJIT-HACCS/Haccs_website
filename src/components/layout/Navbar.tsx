@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Text, Button, IconButton, Image } from "@chakra-ui/react";
+import { Box, Flex, HStack, Text, Button, IconButton, Image, Link as ChakraLink } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
 import React from "react";
 import haccsLogo from "@/assets/haccs-logo.png";
@@ -11,6 +11,7 @@ const navLinks = [
   { name: "EVENTS", path: "/events" },
   { name: "SPONSORS", path: "/sponsors" },
   { name: "CONTACT US", path: "/contact" },
+  
 ];
 
 const Navbar: React.FC = () => {
@@ -75,19 +76,21 @@ const Navbar: React.FC = () => {
         </HStack>
 
         {/* CTA Button */}
-        <Button
-          display={{ base: "none", md: "flex" }}
-          variant="outline"
-          borderColor="haccs.coral"
-          color="haccs.coral"
-          fontFamily="heading"
-          fontWeight={600}
-          px={6}
-          _hover={{ bg: "haccs.coral", color: "white" }}
-          transition="all 0.3s"
-        >
-          EXPLORE MORE
-        </Button>
+        <ChakraLink href="https://njit.campuslabs.com/engage/organization/haccs" target="_blank">
+          <Button
+            display={{ base: "none", md: "flex" }}
+            variant="outline"
+            borderColor="haccs.coral"
+            color="haccs.coral"
+            fontFamily="heading"
+            fontWeight={600}
+            px={6}
+            _hover={{ bg: "haccs.coral", color: "white" }}
+            transition="all 0.3s"
+          >
+            EXPLORE MORE
+          </Button>
+        </ChakraLink>
 
         {/* Mobile Menu Button */}
         <IconButton
