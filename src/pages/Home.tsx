@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import React from "react";
 import { Linkedin, Instagram } from "lucide-react";
 import Layout from "@/components/layout/Layout";
+import HeroNetworkCanvas from "@/components/HeroNetworkCanvas";
 
 const Home: React.FC = () => {
   return (
@@ -135,6 +136,20 @@ const Home: React.FC = () => {
               <Box w="1px" h="60px" bg="haccs.coral" mx="auto" />
             </VStack>
           </Flex>
+
+          <Box
+            position="absolute"
+            top="50%"
+            right={{ lg: "7%", xl: "11%" }}
+            transform="translateY(-50%)"
+            w={{ lg: "360px", xl: "460px" }}
+            h={{ lg: "360px", xl: "460px" }}
+            display={{ base: "none", lg: "block" }}
+            pointerEvents="none"
+            opacity={0.95}
+          >
+            <HeroNetworkCanvas />
+          </Box>
 
           {/* Mission Statement */}
           <Box position="absolute" bottom="10%" right="10%" maxW="500px" display={{ base: "none", lg: "block" }}>
