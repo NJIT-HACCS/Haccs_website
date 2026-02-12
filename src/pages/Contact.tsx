@@ -1,4 +1,5 @@
 import {
+  Alert,
   Box,
   Container,
   SimpleGrid,
@@ -10,9 +11,17 @@ import {
   Button,
   Link as ChakraLink,
 } from "@chakra-ui/react";
-import { Mail, MapPin, Linkedin, Instagram } from "lucide-react";
+import { Mail, MapPin, Linkedin, Instagram, CircleAlert, CircleCheck } from "lucide-react";
 import React, { useState } from "react";
 import Layout from "@/components/layout/Layout";
+
+const HACCS_EMAIL = "njithaccs@gmail.com";
+const NETLIFY_FORM_NAME = "haccs-contact";
+
+const encode = (data: Record<string, string>) =>
+  Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key] ?? "")}`)
+    .join("&");
 
 const DiscordIcon = () => (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -27,15 +36,50 @@ const Contact: React.FC = () => {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitState, setSubmitState] = useState<{ type: "success" | "error"; message: string } | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setSubmitState(null);
+    setIsSubmitting(true);
+
+    try {
+      const payload = {
+        "form-name": NETLIFY_FORM_NAME,
+        "bot-field": "",
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        subject: formData.subject.trim(),
+        message: formData.message.trim(),
+      };
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: encode(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message.");
+      }
+
+      setSubmitState({ type: "success", message: "Message sent successfully. We'll reach out to you soon." });
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      setSubmitState({
+        type: "error",
+        message: `Message could not be sent right now. Please email us directly at ${HACCS_EMAIL}.`,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -79,7 +123,7 @@ const Contact: React.FC = () => {
                 >
                   <Mail size={18} />
                 </Box>
-                <Text color="whiteAlpha.800">njithaccs@gmail.com</Text>
+                <Text color="whiteAlpha.800">{HACCS_EMAIL}</Text>
               </HStack>
               <HStack>
                 <Box
@@ -157,6 +201,10 @@ const Contact: React.FC = () => {
           {/* Right Side - Form */}
           <Box
             as="form"
+            name={NETLIFY_FORM_NAME}
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
             bg="haccs.navyLight"
             borderRadius="xl"
@@ -164,6 +212,8 @@ const Contact: React.FC = () => {
             border="1px solid"
             borderColor="whiteAlpha.100"
           >
+            <input type="hidden" name="form-name" value={NETLIFY_FORM_NAME} />
+            <input type="hidden" name="bot-field" />
             <VStack gap={6}>
               <Box w="full">
                 <Text fontFamily="heading" fontSize="sm" color="haccs.cream" mb={2}>
@@ -173,6 +223,7 @@ const Contact: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
+                  required
                   placeholder="   Enter your name"
                   bg="haccs.navy"
                   border="1px solid"
@@ -192,6 +243,7 @@ const Contact: React.FC = () => {
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
+                  required
                   placeholder="   Enter your email"
                   bg="haccs.navy"
                   border="1px solid"
@@ -210,6 +262,7 @@ const Contact: React.FC = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
+                  required
                   placeholder="   Subject"
                   bg="haccs.navy"
                   border="1px solid"
@@ -228,6 +281,7 @@ const Contact: React.FC = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
+                  required
                   placeholder="   Your message..."
                   rows={5}
                   bg="haccs.navy"
@@ -247,11 +301,26 @@ const Contact: React.FC = () => {
                 fontFamily="heading"
                 fontWeight={600}
                 py={6}
+                isLoading={isSubmitting}
+                loadingText="SENDING..."
                 _hover={{ bg: "haccs.coralLight" }}
                 transition="all 0.3s"
               >
                 SEND MESSAGE
               </Button>
+              {submitState && (
+                <Alert
+                  status={submitState.type}
+                  borderRadius="md"
+                  bg={submitState.type === "success" ? "green.900" : "red.900"}
+                  color="white"
+                >
+                  <Box mr={2} display="flex" alignItems="center">
+                    {submitState.type === "success" ? <CircleCheck size={18} /> : <CircleAlert size={18} />}
+                  </Box>
+                  {submitState.message}
+                </Alert>
+              )}
             </VStack>
           </Box>
         </SimpleGrid>
