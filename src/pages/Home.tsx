@@ -58,7 +58,7 @@ const Home: React.FC = () => {
             <Box w="120px" h="3px" bg="haccs.coral" />
 
             {/* CTA Button */}
-            <Link to="/about">
+            <Link to="/about" style={{ alignSelf: "flex-start", width: "fit-content" }}>
               <Button
                 variant="outline"
                 borderColor="haccs.coral"
