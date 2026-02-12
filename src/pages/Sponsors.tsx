@@ -1,7 +1,6 @@
 import { Box, Container, Text, VStack, Button } from "@chakra-ui/react";
 import React from "react";
 import Layout from "@/components/layout/Layout";
-import { Link } from "react-router-dom";
 import audibleLogo from "@/assets/Audible-logo.png";
 
 const Sponsors: React.FC = () => {
@@ -89,21 +88,7 @@ const Sponsors: React.FC = () => {
           <Text fontSize="md" color="whiteAlpha.700" mb={8} maxW="600px" mx="auto">
             Partner with HACCS to support Hispanic students in computing. Your sponsorship helps fund events, workshops, and career development opportunities.
           </Text>
-          <Link to="/contact">
-            <Button
-              bg="haccs.coral"
-              color="white"
-              fontFamily="heading"
-              fontWeight={600}
-              px={10}
-              py={6}
-              fontSize="lg"
-              _hover={{ bg: "haccs.coralLight" }}
-              transition="all 0.3s"
-            >
-              GET IN TOUCH
-            </Button>
-          </Link>
+           
         </Box>
       </Container>
     </Layout>

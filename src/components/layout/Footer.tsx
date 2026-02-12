@@ -49,9 +49,9 @@ const Footer: React.FC = () => {
                 Gallery
               </Text>
             </Link>
-            <Link to="/contact">
+            <Link to="/sponsors">
               <Text fontSize="sm" color="whiteAlpha.700" _hover={{ color: "haccs.coral" }}>
-                Contact
+                Sponsors
               </Text>
             </Link>
           </VStack>

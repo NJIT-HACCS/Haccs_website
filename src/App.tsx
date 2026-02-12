@@ -9,7 +9,6 @@ import AboutUs from "./pages/AboutUs";
 import Gallery from "./pages/Gallery";
 import Achievements from "./pages/Achievements";
 import Events from "./pages/Events";
-import Contact from "./pages/Contact";
 import Sponsors from "./pages/Sponsors";
 import NotFound from "./pages/NotFound";
 
@@ -57,7 +56,6 @@ const App = () => (
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/achievements" element={<Achievements />} />
             <Route path="/events" element={<Events />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/sponsors" element={<Sponsors />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

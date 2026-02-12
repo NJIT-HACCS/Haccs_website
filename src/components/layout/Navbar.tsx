@@ -10,8 +10,6 @@ const navLinks = [
   { name: "ACHIEVEMENTS", path: "/achievements" },
   { name: "EVENTS", path: "/events" },
   { name: "SPONSORS", path: "/sponsors" },
-  { name: "CONTACT US", path: "/contact" },
-  
 ];
 
 const Navbar: React.FC = () => {
