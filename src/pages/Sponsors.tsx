@@ -2,8 +2,30 @@ import { Box, Container, Text, VStack, Button } from "@chakra-ui/react";
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import audibleLogo from "@/assets/Audible-logo.png";
+import prudentialLogo from "@/assets/prudential-logo.png";
 
 const Sponsors: React.FC = () => {
+  const sponsorCardStyles = {
+    w: { base: "100%", md: "700px" },
+    mx: "auto",
+    p: { base: 2, md: 3 },
+    borderRadius: "20px",
+    bg: "rgba(5, 17, 64, 0.95)",
+    boxShadow: "0 0 16px rgba(126, 156, 228, 0.32)",
+  };
+
+  const sponsorInnerStyles = {
+    h: { base: "125px", md: "150px" },
+    borderRadius: "14px",
+    bg: "#F3F4F6",
+    border: "4px solid",
+    borderColor: "#B6C0D2",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    px: { base: 5, md: 8 },
+  };
+
   return (
     <Layout>
       <Container maxW="1400px" px={{ base: 4, md: 8, lg: 16 }} py={20}>
@@ -39,31 +61,39 @@ const Sponsors: React.FC = () => {
             </Text>
           </VStack>
 
-          <Box
-            w="full"
-            maxW="700px"
-            mx="auto"
-            p={{ base: 2, md: 3 }}
-            borderRadius="20px"
-            bg="rgba(5, 17, 64, 0.95)"
-            boxShadow="0 0 16px rgba(126, 156, 228, 0.32)"
-          >
-            <Box
-              minH={{ base: "125px", md: "150px" }}
-              borderRadius="14px"
-              bg="#F3F4F6"
-              border="4px solid"
-              borderColor="#B6C0D2"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              px={{ base: 5, md: 8 }}
-              py={{ base: 5, md: 6 }}
-            >
+          <Box {...sponsorCardStyles}>
+            <Box {...sponsorInnerStyles}>
               <Box
                 as="img"
                 src={audibleLogo}
                 alt="Audible logo"
+                width={{ base: "180px", md: "295px" }}
+                maxW="100%"
+                height="auto"
+                objectFit="contain"
+              />
+            </Box>
+          </Box>
+
+          <VStack gap={3} textAlign="center" pt={2}>
+            <Text
+              fontFamily="heading"
+              fontSize={{ base: "2xl", md: "3xl" }}
+              fontWeight={900}
+              color="haccs.cream"
+              textTransform="uppercase"
+              letterSpacing="0.04em"
+            >
+              Visionary Tier
+            </Text>
+          </VStack>
+
+          <Box {...sponsorCardStyles}>
+            <Box {...sponsorInnerStyles}>
+              <Box
+                as="img"
+                src={prudentialLogo}
+                alt="Prudential logo"
                 width={{ base: "220px", md: "360px" }}
                 maxW="100%"
                 height="auto"

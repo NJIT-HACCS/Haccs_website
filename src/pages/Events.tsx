@@ -57,6 +57,12 @@ const EventCard: React.FC<EventCardProps> = ({ title, date, time, location, isUp
 
 const pastEvents = [
   {
+    title: "Speaker Series: Systems Engineering with Daniel Vargas",
+    date: "February 18, 2026",
+    time: "2:30 PM - 4:00 PM",
+    location: "CKB 126",
+  },
+  {
     title: "GBM1",
     date: "January 23, 2026",
     time: "11:30 AM - 1:00 PM",
@@ -76,7 +82,7 @@ const pastEvents = [
   },
   {
     title: "VS Code Dev Days",
-    date: "September 4, 2024",
+    date: "September 4, 2025",
     time: "1:00 PM - 3:00 PM",
     location: "GITC 3700",
   },
