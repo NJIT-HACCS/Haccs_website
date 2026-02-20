@@ -25,7 +25,7 @@ const Achievements: React.FC = () => {
           </Text>
           <Box w="80px" h="3px" bg="haccs.coral" />
           <Text fontSize="lg" color="whiteAlpha.800" lineHeight={1.8} maxW="900px" mt={4}>
-            In its first year, HACCS has been able to accrue almost 100+ members, which can be attributed to NJIT recently becoming a Hispanic Serving Institution. We have hosted panels including professionals from Prudential, Lockheed Martin, Apple & the U.S. Department of Defense. We have provided resources to our members through CAHSI (Computing Alliance of Hispanic Serving Institutions).
+            In its first year, HACCS has been able to accrue almost 100+ members, which can be attributed to NJIT recently becoming a Hispanic Serving Institution. We have hosted panels including professionals from Audible, Prudential, NVIDIA, AWS, and more! We have provided resources to our members through CAHSI (Computing Alliance of Hispanic Serving Institutions).
           </Text>
         </VStack>
 
