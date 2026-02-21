@@ -1,6 +1,6 @@
-import { Box, Flex, HStack, Text, Button, IconButton, Image, Link as ChakraLink } from "@chakra-ui/react";
+import { Box, Flex, HStack, Text, Button, IconButton, Image, Link as ChakraLink, VStack } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import haccsLogo from "@/assets/haccs-logo.png";
 
 const navLinks = [
@@ -14,6 +14,7 @@ const navLinks = [
 
 const Navbar: React.FC = () => {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <Box
@@ -30,15 +31,8 @@ const Navbar: React.FC = () => {
     >
       <Flex justify="space-between" align="center" maxW="1400px" mx="auto">
         {/* Logo */}
-        <Link to="/">
-          <Image
-            src={haccsLogo}
-            alt="HACCS Logo"
-            w="50px"
-            h="50px"
-            borderRadius="full"
-            objectFit="cover"
-          />
+        <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
+          <Image src={haccsLogo} alt="HACCS Logo" w="50px" h="50px" borderRadius="full" objectFit="cover" />
         </Link>
 
         {/* Desktop Nav */}
@@ -97,10 +91,41 @@ const Navbar: React.FC = () => {
           variant="ghost"
           color="haccs.cream"
           fontSize="24px"
+          onClick={() => setIsMobileMenuOpen((open) => !open)}
         >
-          <Box as="span">☰</Box>
+          <Box as="span">&#9776;</Box>
         </IconButton>
       </Flex>
+
+      {isMobileMenuOpen && (
+        <VStack
+          align="stretch"
+          gap={2}
+          mt={4}
+          display={{ base: "flex", lg: "none" }}
+          bg="rgba(10, 22, 40, 0.98)"
+          border="1px solid"
+          borderColor="whiteAlpha.300"
+          borderRadius="md"
+          p={3}
+        >
+          {navLinks.map((link) => (
+            <Link key={link.path} to={link.path} onClick={() => setIsMobileMenuOpen(false)}>
+              <Text
+                fontFamily="heading"
+                fontSize="sm"
+                fontWeight={600}
+                color={location.pathname === link.path ? "haccs.coral" : "haccs.cream"}
+                py={2}
+                _hover={{ color: "haccs.coral" }}
+                transition="color 0.2s"
+              >
+                {link.name}
+              </Text>
+            </Link>
+          ))}
+        </VStack>
+      )}
     </Box>
   );
 };
