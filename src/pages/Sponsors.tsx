@@ -102,8 +102,7 @@ const Sponsors: React.FC = () => {
             </Box>
           </Box>
         </VStack>
-
-        {/* Become a Sponsor CTA */}
+        {/* Upload Resume */}
         <Box
           bg="haccs.navyLight"
           borderRadius="xl"
@@ -111,26 +110,7 @@ const Sponsors: React.FC = () => {
           textAlign="center"
           border="1px solid"
           borderColor="haccs.coral"
-        >
-          <Text fontFamily="heading" fontSize="2xl" fontWeight="bold" color="haccs.cream" mb={4}>
-            Become a Sponsor
-          </Text>
-          <Text fontSize="md" color="whiteAlpha.700" mb={8} maxW="600px" mx="auto">
-            Partner with HACCS to support Hispanic students in computing. Your sponsorship helps fund events, workshops, and career development opportunities.
-          </Text>
-           
-        </Box>
-
-
-        {/* Become a Sponsor CTA */}
-        <Box
-          bg="haccs.navyLight"
-          borderRadius="xl"
-          p={12}
-          textAlign="center"
-          border="1px solid"
-          borderColor="haccs.coral"
-          mt={12}
+          
         >
           <Text fontFamily="heading" fontSize="2xl" fontWeight="bold" color="haccs.cream" mb={4}>
             Want to Connect?
@@ -155,6 +135,25 @@ const Sponsors: React.FC = () => {
             Upload Resume
           </Button>
         </Box>
+        {/* Become a Sponsor CTA */}
+        <Box
+          bg="haccs.navyLight"
+          borderRadius="xl"
+          p={12}
+          textAlign="center"
+          border="1px solid"
+          borderColor="haccs.coral"
+          mt={12}
+        >
+          <Text fontFamily="heading" fontSize="2xl" fontWeight="bold" color="haccs.cream" mb={4}>
+            Become a Sponsor
+          </Text>
+          <Text fontSize="md" color="whiteAlpha.700" mb={8} maxW="600px" mx="auto">
+            Partner with HACCS to support Hispanic students in computing. Your sponsorship helps fund events, workshops, and career development opportunities.
+          </Text>
+           
+        </Box>
+
       </Container>
     </Layout>
   );
