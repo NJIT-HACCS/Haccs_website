@@ -120,6 +120,41 @@ const Sponsors: React.FC = () => {
           </Text>
            
         </Box>
+
+
+        {/* Become a Sponsor CTA */}
+        <Box
+          bg="haccs.navyLight"
+          borderRadius="xl"
+          p={12}
+          textAlign="center"
+          border="1px solid"
+          borderColor="haccs.coral"
+          mt={12}
+        >
+          <Text fontFamily="heading" fontSize="2xl" fontWeight="bold" color="haccs.cream" mb={4}>
+            Want to Connect?
+          </Text>
+          <Text fontSize="md" color="whiteAlpha.700" mb={8} maxW="600px" mx="auto">
+            Upload your resume to gain exposure to companies that partner with HACCS!
+          </Text>
+          <Button
+            as="a"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdk2Cq3D8j-cwe1mfVLTbsMSagSmtSozG2wfVH9XQ2PIuBYPA/viewform?usp=header"
+            target="_blank"
+            rel="noopener noreferrer"
+            bg="haccs.coral"
+            color="white"
+            fontFamily="heading"
+            fontWeight={600}
+            fontSize={{ base: "md", md: "lg" }}
+            px={10}
+            py={7}
+            _hover={{ bg: "haccs.coral", opacity: 0.9 }}
+          >
+            Upload Resume
+          </Button>
+        </Box>
       </Container>
     </Layout>
   );

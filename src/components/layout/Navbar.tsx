@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
         </HStack>
 
         {/* CTA Button */}
-        <ChakraLink href="https://docs.google.com/forms/d/e/1FAIpQLSdk2Cq3D8j-cwe1mfVLTbsMSagSmtSozG2wfVH9XQ2PIuBYPA/viewform?usp=header" target="_blank">
+        <ChakraLink href="https://njit.campuslabs.com/engage/organization/haccs" target="_blank">
           <Button
             display={{ base: "none", md: "flex" }}
             variant="outline"
@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
             _hover={{ bg: "haccs.coral", color: "white" }}
             transition="all 0.3s"
           >
-            Resume Pool
+            EXPLORE MORE
           </Button>
         </ChakraLink>
 
