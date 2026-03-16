@@ -57,6 +57,30 @@ const EventCard: React.FC<EventCardProps> = ({ title, date, time, location, isUp
 
 const pastEvents = [
   {
+    title: "GBM2 Series",
+    date: "March 11, 2026",
+    time: "2:30 PM - 4:00 PM",
+    location: "CKB 215",
+  },
+  {
+    title: "Giving Day",
+    date: "March 4, 2026",
+    time: "12:00 PM - 2:00 PM",
+    location: "Campus Center Lobby",
+  },
+  {
+    title: "Speaker Series: Talent Acquisition with Olivia Arias",
+    date: "March 4, 2026",
+    time: "2:30 PM - 4:00 PM",
+    location: "CKB 126",
+  },
+  {
+    title: "Latino Wellness Day",
+    date: "March 2, 2026",
+    time: "1:00 PM - 3:00 PM",
+    location: "Agile Strategy Lab, CKB",
+  },
+  {
     title: "Speaker Series: Systems Engineering with Daniel Vargas",
     date: "February 18, 2026",
     time: "2:30 PM - 4:00 PM",
