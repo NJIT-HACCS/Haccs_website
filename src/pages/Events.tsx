@@ -57,7 +57,7 @@ const EventCard: React.FC<EventCardProps> = ({ title, date, time, location, isUp
 
 const pastEvents = [
   {
-    title: "GBM2 Series",
+    title: "GBM2",
     date: "March 11, 2026",
     time: "2:30 PM - 4:00 PM",
     location: "CKB 215",
