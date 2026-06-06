@@ -1,7 +1,7 @@
 import { Box, Flex, HStack, Text, Button, IconButton, Image, Link as ChakraLink, VStack } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
 import React, { useState } from "react";
-import haccsLogo from "@/assets/haccs-logo.png";
+import haccsLogo from "@/assets/haccs-logo.webp";
 
 const navLinks = [
   { name: "HOME", path: "/" },

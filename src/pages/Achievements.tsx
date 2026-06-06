@@ -1,10 +1,10 @@
 import { Box, Container, SimpleGrid, Text, Image, VStack, HStack, Flex } from "@chakra-ui/react";
 import React from "react";
 import Layout from "@/components/layout/Layout";
-import tecnoNuevo from "@/assets/gallery/tecno-nuevo-extended.png";
-import njitEvent from "@/assets/gallery/njit-event.png";
-import njitTeam from "@/assets/gallery/njit-team.png";
-import achievement1 from "@/assets/achievements/achievement-1.jpg";
+import tecnoNuevo from "@/assets/gallery/tecno-nuevo-extended.webp";
+import njitEvent from "@/assets/gallery/njit-event.webp";
+import njitTeam from "@/assets/gallery/njit-team.webp";
+import achievement1 from "@/assets/achievements/achievement-1.webp";
 
 const achievementImages = [tecnoNuevo, njitTeam, njitEvent, achievement1];
 

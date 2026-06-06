@@ -1,8 +1,8 @@
-import { Box, Container, Text, VStack, Button } from "@chakra-ui/react";
+import { Box, Container, Text, VStack, Button, Image } from "@chakra-ui/react";
 import React from "react";
 import Layout from "@/components/layout/Layout";
-import audibleLogo from "@/assets/Audible-logo.png";
-import prudentialLogo from "@/assets/prudential-logo.png";
+import audibleLogo from "@/assets/Audible-logo.webp";
+import prudentialLogo from "@/assets/prudential-logo.webp";
 
 const Sponsors: React.FC = () => {
   const sponsorCardStyles = {
@@ -63,8 +63,7 @@ const Sponsors: React.FC = () => {
 
           <Box {...sponsorCardStyles}>
             <Box {...sponsorInnerStyles}>
-              <Box
-                as="img"
+              <Image
                 src={audibleLogo}
                 alt="Audible logo"
                 width={{ base: "180px", md: "295px" }}
@@ -90,8 +89,7 @@ const Sponsors: React.FC = () => {
 
           <Box {...sponsorCardStyles}>
             <Box {...sponsorInnerStyles}>
-              <Box
-                as="img"
+              <Image
                 src={prudentialLogo}
                 alt="Prudential logo"
                 width={{ base: "220px", md: "360px" }}
@@ -119,10 +117,7 @@ const Sponsors: React.FC = () => {
             Upload your resume to gain exposure to companies that partner with HACCS!
           </Text>
           <Button
-            as="a"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSdk2Cq3D8j-cwe1mfVLTbsMSagSmtSozG2wfVH9XQ2PIuBYPA/viewform?usp=header"
-            target="_blank"
-            rel="noopener noreferrer"
+            asChild
             bg="haccs.coral"
             color="white"
             fontFamily="heading"
@@ -132,7 +127,13 @@ const Sponsors: React.FC = () => {
             py={7}
             _hover={{ bg: "haccs.coral", opacity: 0.9 }}
           >
-            Upload Resume
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdk2Cq3D8j-cwe1mfVLTbsMSagSmtSozG2wfVH9XQ2PIuBYPA/viewform?usp=header"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Upload Resume
+            </a>
           </Button>
         </Box>
         {/* Become a Sponsor CTA */}

@@ -2,12 +2,12 @@ import { Box, Container, SimpleGrid, Text, Image, VStack, HStack, Link as Chakra
 import { Mail, Linkedin, Instagram } from "lucide-react";
 import React from "react";
 import Layout from "@/components/layout/Layout";
-import gallery1 from "@/assets/gallery/gallery-1.jpg";
-import gallery2 from "@/assets/gallery/gallery-2.jpg";
-import gallery3 from "@/assets/gallery/gallery-3.jpg";
-import gallery4 from "@/assets/gallery/gallery-4.jpg";
-import gallery5 from "@/assets/gallery/gallery-5.jpg";
-import gallery6 from "@/assets/gallery/gallery-6.jpg";
+import gallery1 from "@/assets/gallery/gallery-1.webp";
+import gallery2 from "@/assets/gallery/gallery-2.webp";
+import gallery3 from "@/assets/gallery/gallery-3.webp";
+import gallery4 from "@/assets/gallery/gallery-4.webp";
+import gallery5 from "@/assets/gallery/gallery-5.webp";
+import gallery6 from "@/assets/gallery/gallery-6.webp";
 
 const galleryImages = [
   { src: gallery1, alt: "HACCS Event 1" },

@@ -4,21 +4,21 @@ import Layout from "@/components/layout/Layout";
 import EBoardMemberChakra from "@/components/EBoardMemberChakra";
 
 // Import member images
-import member1 from "@/assets/member-1.jpg";
-import member2 from "@/assets/member-2.jpg";
-import member3 from "@/assets/member-3.jpg";
-import member4 from "@/assets/member-4.jpg";
-import member5 from "@/assets/member-5.jpg";
-import member6 from "@/assets/member-6.jpg";
-import memberAlejandro from "@/assets/member-alejandro.jpg";
-import memberAngelo from "@/assets/member-angelo.jpg";
-import memberTreasurer from "@/assets/member-treasurer.jpg";
+import member1 from "@/assets/member-1.webp";
+import member2 from "@/assets/member-2.webp";
+import member3 from "@/assets/member-3.webp";
+import member4 from "@/assets/member-4.webp";
+import member5 from "@/assets/member-5.webp";
+import member6 from "@/assets/member-6.webp";
+import memberAlejandro from "@/assets/member-alejandro.webp";
+import memberAngelo from "@/assets/member-angelo.webp";
+import memberTreasurer from "@/assets/member-treasurer.webp";
 
 // Import event images
-import event1 from "@/assets/club-event-1.jpg";
-import event2 from "@/assets/club-event-2.jpg";
-import event3 from "@/assets/club-event-3.jpg";
-import event4 from "@/assets/club-event-4.jpg";
+import event1 from "@/assets/club-event-1.webp";
+import event2 from "@/assets/club-event-2.webp";
+import event3 from "@/assets/club-event-3.webp";
+import event4 from "@/assets/club-event-4.webp";
 
 const eboardMembers = [
   {

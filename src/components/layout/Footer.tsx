@@ -2,7 +2,7 @@ import { Box, Container, Flex, HStack, VStack, Text, Link as ChakraLink, Image }
 import { Mail, Linkedin, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
 import React from "react";
-import haccsLogo from "@/assets/haccs-logo.png";
+import haccsLogo from "@/assets/haccs-logo.webp";
 
 const Footer: React.FC = () => {
   return (
