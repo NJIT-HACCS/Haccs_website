@@ -4,15 +4,13 @@ import Layout from "@/components/layout/Layout";
 import EBoardMemberChakra from "@/components/EBoardMemberChakra";
 
 // Import member images
-import member1 from "@/assets/member-1.jpg";
-import member2 from "@/assets/member-2.jpg";
-import member3 from "@/assets/member-3.jpg";
-import member4 from "@/assets/member-4.jpg";
-import member5 from "@/assets/member-5.jpg";
-import member6 from "@/assets/member-6.jpg";
-import memberAlejandro from "@/assets/member-alejandro.jpg";
-import memberAngelo from "@/assets/member-angelo.jpg";
-import memberTreasurer from "@/assets/member-treasurer.jpg";
+
+import andrea from "@/assets/member-3.jpg";
+import marcel from "@/assets/member-5.jpg";
+import alejandro from "@/assets/member-alejandro.jpg";
+import angelo from "@/assets/member-angelo.jpg";
+import moises from "@/assets/moises.png"
+import angeloBr from "@/assets/angeloBr.jpeg"
 
 // Import event images
 import event1 from "@/assets/club-event-1.jpg";
@@ -22,77 +20,53 @@ import event4 from "@/assets/club-event-4.jpg";
 
 const eboardMembers = [
   {
-    name: "Daniel Montoya",
+    name: "Alejandro Perdomo",
     role: "President",
     major: "Computer Science",
-    year: "Senior",
-    imageUrl: member1,
-    linkedin: "https://www.linkedin.com/in/daniel-eduardo-montoya/",
-  },
-  {
-    name: "Emerson Perez",
-    role: "External Vice President",
-    major: "Computer Science",
     year: "Junior",
-    imageUrl: member2,
-    linkedin: "https://www.linkedin.com/in/eoperez/",
+    imageUrl: alejandro,
+    linkedin: "https://www.linkedin.com/in/apr091107/",
   },
   {
     name: "Andrea Pardo",
-    role: "Internal Vice President",
+    role: "Vice President",
     major: "Data Science",
     year: "Senior",
-    imageUrl: member3,
+    imageUrl: andrea,
     linkedin: "https://www.linkedin.com/in/andreacpardo/",
   },
   {
-    name: "Emily Morales",
-    role: "Secretary",
-    major: "Information Technology",
-    year: "Senior",
-    imageUrl: member4,
-    linkedin: "https://www.linkedin.com/in/emily-morales-medina/",
-  },
-  {
-    name: "Angel Cazares",
+    name: "Angelo Bustamante",
     role: "Treasurer",
-    major: "Computer Science",
+    major: "Web and Information systems",
     year: "Senior",
-    imageUrl: memberTreasurer,
-    linkedin: "https://www.linkedin.com/in/angel-cazares-ajc253/",
+    imageUrl: angelo,
+    linkedin: "https://www.linkedin.com/in/angelobustamante/",
   },
   {
     name: "Marcel Velazquez",
     role: "Public Relations",
     major: "Computer Science",
-    year: "Junior",
-    imageUrl: member5,
+    year: "Senior",
+    imageUrl: marcel,
     linkedin: "https://www.linkedin.com/in/msv42/",
   },
   {
-    name: "Jose Valle",
+    name: "Moises Zuniga",
     role: "Tech Lead",
     major: "Computer Science",
-    year: "Junior",
-    imageUrl: member6,
-    linkedin: "https://www.linkedin.com/in/j-valle1017/",
+    year: "Sophomore",
+    imageUrl: moises,
+    linkedin: "https://www.linkedin.com/in/moiseszuniga/",
   },
   {
-    name: "Alejandro Perdomo",
+    name: "Angelo Bravo",
     role: "Webmaster",
     major: "Computer Science",
-    year: "Sophomore",
-    imageUrl: memberAlejandro,
-    linkedin: "https://www.linkedin.com/in/apr091107/",
-  },
-  {
-    name: "Angelo Bustamante",
-    role: "Webmaster",
-    major: "Web and Information systems",
     year: "Junior",
-    imageUrl: memberAngelo,
-    linkedin: "https://www.linkedin.com/in/angelobustamante/",
-  },
+    imageUrl: angeloBr,
+    linkedin: "https://www.linkedin.com/in/angello-de-jesus-bravo-mera-00300416a/",
+  }
 ];
 
 const AboutUs: React.FC = () => {
